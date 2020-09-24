@@ -7,8 +7,8 @@ public class LineComparisonCartisan {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Welcome to Line Comparison Computation Program");
 		input1();
-		interact2();
-		interact3();
+		//interact2();
+		//interact3();
 	}
 	private static void input1() {
 		Scanner sc=new Scanner(System.in);
@@ -21,7 +21,7 @@ public class LineComparisonCartisan {
 		System.out.println("Enter the y-coordinate of 2nd point");
 		int y2=sc.nextInt();
 		System.out.println("Lenth of line is "+lengthOfLine(x1, x2, y1, y2));
-	}
+	}/*
 	private static void interact3() {
 		Scanner sc=new Scanner(System.in);
 		String length_line[]=new String[2];
@@ -65,7 +65,7 @@ public class LineComparisonCartisan {
 		else
 			System.out.println("The lines are unequal in length.");
 	}
-
+*/
 	
 	private static double lengthOfLine(int x1,int x2,int y1, int y2) {
 		double length=Math.sqrt(Math.pow(x1-x2, 2)+Math.pow(y1-y2, 2));
