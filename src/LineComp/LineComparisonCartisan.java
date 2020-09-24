@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class LineComparisonCartisan {
 	public static void main(String args[]) {
-		Scanner sc=new Scanner(System.in);
 		System.out.println("Welcome to Line Comparison Computation Program");
 		input1();
 		//interact2();
@@ -20,7 +19,8 @@ public class LineComparisonCartisan {
 		int x2=sc.nextInt();
 		System.out.println("Enter the y-coordinate of 2nd point");
 		int y2=sc.nextInt();
-		System.out.println("Lenth of line is "+lengthOfLine(x1, x2, y1, y2));
+		System.out.println("Length of line is "+lengthOfLine(x1, x2, y1, y2));
+		sc.close();
 	}/*
 	private static void interact3() {
 		Scanner sc=new Scanner(System.in);
