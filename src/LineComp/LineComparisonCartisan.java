@@ -6,11 +6,11 @@ public class LineComparisonCartisan {
 	public static void main(String args[]) {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Welcome to Line Comparison Computation Program");
-		interact1();
+		input1();
 		interact2();
 		interact3();
 	}
-	private static void interact1() {
+	private static void input1() {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the x-coordinate of 1st point");
 		int x1=sc.nextInt();
