@@ -4,13 +4,25 @@ import java.util.Scanner;
 
 public class LineComparisonCartisan {
 	public static void main(String args[]) {
-		System.out.println("Welcome to Line Comparison Computation Program");
-		input1();
-		//interact2();
-		//interact3();
-	}
-	private static void input1() {
 		Scanner sc=new Scanner(System.in);
+		System.out.println("Welcome to Line Comparison Computation Program\nEnter 1 to calculate length of line"
+				+ "\nEnter 2 to check if the length of 2 lines are equal");
+		int user_option=sc.nextInt();
+		switch (user_option) {
+		case 1:
+			System.out.println("Length of line is "+input1());
+			break;
+		case 2:
+			equalsToLineLength();
+			break;
+		}
+		//interact3();
+			sc.close();
+		
+	}
+	private static double input1() {
+		Scanner sc=new Scanner(System.in);
+		double length_of_line;
 		System.out.println("Enter the x-coordinate of 1st point");
 		int x1=sc.nextInt();
 		System.out.println("Enter the y-coordinate of 1st point");
@@ -19,8 +31,8 @@ public class LineComparisonCartisan {
 		int x2=sc.nextInt();
 		System.out.println("Enter the y-coordinate of 2nd point");
 		int y2=sc.nextInt();
-		System.out.println("Length of line is "+lengthOfLine(x1, x2, y1, y2));
-		sc.close();
+		length_of_line=lengthOfLine(x1, x2, y1, y2);
+		return length_of_line;
 	}/*
 	private static void interact3() {
 		Scanner sc=new Scanner(System.in);
@@ -44,28 +56,19 @@ public class LineComparisonCartisan {
 			System.out.println("Line 2 is longer than Line 1");
 		else 
 			System.out.println("Line 1 is longer than Line 1");
-	}
-	private static void interact2() {
-		Scanner sc=new Scanner(System.in);
+		sc.close();
+	}*/
+	private static void equalsToLineLength() {
 		double length_line[]=new double[2];
 		for(int i=0;i<2;i++) {
 			System.out.println("For Line "+(i+1));
-			System.out.println("Enter the x-coordinate of 1st point");
-			int x1=sc.nextInt();
-			System.out.println("Enter the y-coordinate of 1st point");
-			int y1=sc.nextInt();
-			System.out.println("Enter the x-coordinate of 2nd point");
-			int x2=sc.nextInt();
-			System.out.println("Enter the y-coordinate of 2nd point");
-			int y2=sc.nextInt();
-			length_line[i]=lengthOfLine(x1, x2, y1, y2);
+			length_line[i]=input1();
 		}
 		if(length_line[0]==(length_line[1]))
 			System.out.println("The lines are equal in length.");
 		else
 			System.out.println("The lines are unequal in length.");
 	}
-*/
 	
 	private static double lengthOfLine(int x1,int x2,int y1, int y2) {
 		double length=Math.sqrt(Math.pow(x1-x2, 2)+Math.pow(y1-y2, 2));
