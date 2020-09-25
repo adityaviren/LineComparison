@@ -57,12 +57,12 @@ public class LineComparisonCartisan {
 	}
 
 	private static void equalsToLineLength() {
-		double length_line[] = new double[2];
+		String length_line[] = new String[2];
 		for (int i = 0; i < 2; i++) {
 			System.out.println("For Line " + (i + 1));
-			length_line[i] = input1();
+			length_line[i] = Double.toString(input1());
 		}
-		if (length_line[0] == (length_line[1]))
+		if (length_line[0].equals(length_line[1]))
 			System.out.println("The lines are equal in length.");
 		else
 			System.out.println("The lines are unequal in length.");
