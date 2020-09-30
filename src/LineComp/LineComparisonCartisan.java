@@ -4,26 +4,7 @@ import java.util.Scanner;
 
 public class LineComparisonCartisan {
 	public static void main(String args[]) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Welcome to Line Comparison Computation Program\nEnter 1 to calculate length of line"
-				+ "\nEnter 2 to check if the length of 2 lines are equal"
-				+ "\nEnter 3 to compare the length of 2 lines");
-		int user_option = sc.nextInt();
-		switch (user_option) {
-		case 1:
-			System.out.println("Length of line is " + input1());
-			break;
-		case 2:
-			equalsToLineLength();
-			break;
-		case 3:
-			compareToLineLength();
-			break;
-		default:
-			break;
-		}
-		sc.close();
-
+		System.out.println(input1());
 	}
 
 	private static double input1() {
@@ -39,33 +20,6 @@ public class LineComparisonCartisan {
 		int y2 = sc.nextInt();
 		length_of_line = lengthOfLine(x1, x2, y1, y2);
 		return length_of_line;
-	}
-
-	private static void compareToLineLength() {
-		String length_line[] = new String[2];
-		for (int i = 0; i < 2; i++) {
-			System.out.println("For Line " + (i + 1));
-			length_line[i] = Double.toString(input1());
-		}
-		int check_compareTO = length_line[0].compareTo(length_line[1]);
-		if (check_compareTO == 0)
-			System.out.println("The lines are equal in length.");
-		else if (check_compareTO < 0)
-			System.out.println("Line 2 is longer than Line 1");
-		else
-			System.out.println("Line 1 is longer than Line 1");
-	}
-
-	private static void equalsToLineLength() {
-		String length_line[] = new String[2];
-		for (int i = 0; i < 2; i++) {
-			System.out.println("For Line " + (i + 1));
-			length_line[i] = Double.toString(input1());
-		}
-		if (length_line[0].equals(length_line[1]))
-			System.out.println("The lines are equal in length.");
-		else
-			System.out.println("The lines are unequal in length.");
 	}
 
 	private static double lengthOfLine(int x1, int x2, int y1, int y2) {
